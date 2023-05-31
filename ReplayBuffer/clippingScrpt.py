@@ -1,8 +1,3 @@
-'''
-Author: Donya aka Niuklear
-Niuklear@gmail.com 
-twitch.tv/Niuklear Twiiter.com/Niuklear
-'''
 # The following script moves all the clips from the default folder to the desired folder.
 # You can assing your shortcut button on for saving buffer replays in different direcotry other than the original one
 # You can create an .exe file if your stream deck software or its alternative doesn't support 
