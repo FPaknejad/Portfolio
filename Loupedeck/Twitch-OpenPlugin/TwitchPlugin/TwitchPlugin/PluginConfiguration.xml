@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <plugin displayName="Twitch" homepage="https://loupedeck.com" />
+    <aliases>
+        <alias name="AllButtons" controls="Crop" />
+        <alias name="AllEncoders" controls="Crop" />
+    </aliases>
+
+    <modes>
+        <mode name="Main" />
+    </modes>
+
+    <actions>
+        <group displayName="">
+			<command name="ResetSettings" displayName="Reset Settings" description="Resets chat settings to default."/>
+		</group>
+      <group displayName="SendChatMessage">
+        <command name="SendChatMessage" profileActionType="text;Enter message text:" description="Sends a predefined message to your Twitch chat"/>
+      </group>
+    </actions>
+
+    <layouts>
+        <layout name="Main">
+            <command name="SendChatMessage" displayName="AllButtons"/>
+			</layout>
+    </layouts>
+
+</configuration>
