@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52F89C82-8F87-4E46-AA85-434E56227148}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loupedeck.TwitchPlugin</RootNamespace>
+    <AssemblyName>TwitchPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>$(SolutionDir)..\obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)..\bin\</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath Condition="$(OS) == 'Windows_NT'">$(LocalAppData)\Loupedeck\Plugins\ObsStudioPlugin\win\</OutputPath>
+    <OutputPath Condition="$(OS) != 'Windows_NT'">$(HOME)/.local/share/Loupedeck/Plugins/ObsStudioPlugin/mac/</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <OutputPath>..\..\..\..\Users\Andrei Laperie\AppData\Local\Loupedeck\Plugins\TwitchPlugin\win\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>..\..\bin\win\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PluginApi">
+      <HintPath>..\..\..\..\Program Files (x86)\Loupedeck\Loupedeck2\PluginApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\RunCommercialCmd.cs" />
+    <Compile Include="Actions\ChatFollowersCommand.cs" />
+    <Compile Include="Actions\ChatSlowModeCommand.cs" />
+    <Compile Include="Actions\ClearChatCommand.cs" />
+    <Compile Include="Actions\CreateClipCommand.cs" />
+    <Compile Include="Actions\CreateMarkerCommand.cs" />
+    <Compile Include="Actions\UniversalStateSwitch.cs" />
+    <Compile Include="Actions\ChatSubToggleCmd.cs" />
+    <Compile Include="Actions\GenericOnOffSwitch.cs" />
+    <Compile Include="Actions\ChatEmoToggleCmd.cs" />
+    <Compile Include="Actions\InternalDebugCommand.cs" />
+    <Compile Include="Actions\ViewerCountCommand.cs" />
+    <Compile Include="Authenticator\AuthenticationServer.cs" />
+    <Compile Include="DisplayNameMaps.cs" />
+    <Compile Include="Exceptions\InvalidAccessTokenException.cs" />
+    <Compile Include="Localization\Localization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Localization.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Models\ActionHelpers.cs" />
+    <Compile Include="Models\TwitchPluginConfig.cs" />
+    <Compile Include="Models\EventArgs.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TwitchApplication.cs" />
+    <Compile Include="TwitchPlugin.cs" />
+    <Compile Include="Proxy\TwitchProxy.Channel.cs" />
+    <Compile Include="Proxy\TwitchProxy.Connectivity.cs" />
+    <Compile Include="Proxy\TwitchProxy.cs" />
+    <None Include="Proxy\TwitchProxy.Chatters.cs" />
+    <Compile Include="Proxy\TwitchProxy.Viewers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Localization.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginConfiguration.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="Localization\TwitchPlugin_xx-XX.xliff" />
+    <EmbeddedResource Include="Localization\TwitchPlugin_de-DE.xliff" />
+    <EmbeddedResource Include="Localization\TwitchPlugin_ja-JP.xliff" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="metadata\Icon16x16.png" />
+    <EmbeddedResource Include="metadata\Icon256x256.png" />
+    <EmbeddedResource Include="metadata\Icon32x32.png" />
+    <EmbeddedResource Include="metadata\Icon48x48.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchAd.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchAd1.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchChatMessage.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchChatMessage1.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchClearChat.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchClearChat1.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchCreateClip.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchCreateStreamMarker.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchEmoteChat.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchEmoteChatToggle.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchFollowerChat.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchFollowerChatToggle.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchOpenLastClip.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchSlowChat.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchSlowChatToggle.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchStreamTitle.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchSubChat.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchSubChat2.png" />
+    <EmbeddedResource Include="Icons\50x50\TwitchViewers.png" />
+    <EmbeddedResource Include="Icons\50x50\Restart.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchAd.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchAd1.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchChatMessage.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchChatMessage1.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchClearChat.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchClearChat1.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchCreateClip.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchCreateStreamMarker.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchEmoteChat.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchEmoteChatToggle.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchFollowerChat.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchFollowerChatToggle.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchOpenLastClip.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchSlowChat.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchSlowChatToggle.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchStreamTitle.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchSubChat.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchSubChat2.png" />
+    <EmbeddedResource Include="Icons\80x80\TwitchViewers.png" />
+    <EmbeddedResource Include="Icons\80x80\Restart.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="metadata\LoupedeckPackage.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Api\TwitchLib.Api.Core.Enums\TwitchLib.Api.Core.Enums.csproj">
+      <Project>{aee0dd3d-0014-4ea1-a275-48b5eb31a2e4}</Project>
+      <Name>TwitchLib.Api.Core.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Api\TwitchLib.Api.Core.Interfaces\TwitchLib.Api.Core.Interfaces.csproj">
+      <Project>{4791b576-380c-4b1d-bbfa-8d5f22cec81f}</Project>
+      <Name>TwitchLib.Api.Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Api\TwitchLib.Api.Core.Models\TwitchLib.Api.Core.Models.csproj">
+      <Project>{c9c93ca6-0ab3-4a16-abf1-cd31cbb34eb0}</Project>
+      <Name>TwitchLib.Api.Core.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Api\TwitchLib.Api.Core\TwitchLib.Api.Core.csproj">
+      <Project>{01290e81-0074-4b12-902b-5227b468d9d2}</Project>
+      <Name>TwitchLib.Api.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Api\TwitchLib.Api.Helix.Models\TwitchLib.Api.Helix.Models.csproj">
+      <Project>{11b7736d-eb3e-4169-9781-a78b50fdb532}</Project>
+      <Name>TwitchLib.Api.Helix.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Api\TwitchLib.Api.Helix\TwitchLib.Api.Helix.csproj">
+      <Project>{510b17ad-c44b-4e47-b45e-b48f9e78b3b3}</Project>
+      <Name>TwitchLib.Api.Helix</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Api\TwitchLib.Api\TwitchLib.Api.csproj">
+      <Project>{4311a398-1fac-4ec2-8d12-8a6b854e80c8}</Project>
+      <Name>TwitchLib.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Client\TwitchLib.Client.Enums\TwitchLib.Client.Enums.csproj">
+      <Project>{67fd8a2f-e7e8-4b66-b85d-acc4d38c7236}</Project>
+      <Name>TwitchLib.Client.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Client\TwitchLib.Client.Models\TwitchLib.Client.Models.csproj">
+      <Project>{578bf6a5-9d74-44e2-839c-3a99ae47d09b}</Project>
+      <Name>TwitchLib.Client.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Client\TwitchLib.Client\TwitchLib.Client.csproj">
+      <Project>{df8b5bfd-5759-4e5d-9503-b5b05781cbf5}</Project>
+      <Name>TwitchLib.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitchLib\TwitchLib.Communication\src\TwitchLib.Communication\TwitchLib.Communication.csproj">
+      <Project>{de0d3cfb-bad5-4264-8ea7-e2472fcd621d}</Project>
+      <Name>TwitchLib.Communication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent Condition="$(OS) == 'Windows_NT'">call "$(ProjectDir)BuildEvents\postbuild.cmd" "$(ProjectDir)" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent Condition="$(OS) != 'Windows_NT'">sh "$(ProjectDir)BuildEvents\postbuild" "$(ProjectDir)" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
