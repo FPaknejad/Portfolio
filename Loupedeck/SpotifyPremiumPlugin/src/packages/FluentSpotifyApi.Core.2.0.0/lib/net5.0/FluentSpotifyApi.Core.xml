@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FluentSpotifyApi.Core</name>
+    </assembly>
+    <members>
+        <member name="T:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException">
+            <summary>
+            The exception that is thrown when a communication error with the Spotify service occurs.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException"/> class.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException.#ctor(System.String,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="clientType">The client type.</param>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException.#ctor(System.String,System.Type,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="clientType">The client type.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.
+            </param>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException.ClientType">
+            <summary>
+            Gets the client type from where the exception was thrown.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpClientTimeoutException">
+            <summary>
+            The exception that shields <see cref="T:System.OperationCanceledException"/> caused by <see cref="T:System.Net.Http.HttpClient"/> internal cancellation token representing timeout.
+            The original <see cref="T:System.OperationCanceledException"/> can be found in <see cref="P:System.Exception.InnerException"/>.
+            </summary>
+            <seealso cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpRequestException" />
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyHttpClientTimeoutException.#ctor(System.Type,System.OperationCanceledException)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpClientTimeoutException" /> class.
+            </summary>
+            <param name="clientType">The client type.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.
+            </param>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpRequestException">
+            <summary>
+            The exception that shields <see cref="T:System.Net.Http.HttpRequestException"/> thrown by <see cref="T:System.Net.Http.HttpClient"/>.
+            The original <see cref="T:System.Net.Http.HttpRequestException"/> can be found in <see cref="P:System.Exception.InnerException"/>.
+            </summary>
+            <seealso cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyCommunicationException" />
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyHttpRequestException.#ctor(System.Type,System.Net.Http.HttpRequestException)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpRequestException"/> class.
+            </summary>
+            <param name="clientType">The client type.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.
+            </param>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException">
+            <summary>
+            The exception that is thrown when a response with error <see cref="T:System.Net.HttpStatusCode"/> is returned from the Spotify service.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException.#ctor(System.Type,System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException" /> class.
+            </summary>
+            <param name="clientType">The client type.</param>
+            <param name="errorCode">The error status code.</param>
+            <param name="content">The content.</param>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException.#ctor(System.String,System.Type,System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="clientType">The client type.</param>
+            <param name="errorCode">The error status code.</param>
+            <param name="content">The content.</param>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException.#ctor(System.String,System.Type,System.Net.HttpStatusCode,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="clientType">The client type.</param>
+            <param name="errorCode">The error status code.</param>
+            <param name="content">The content.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.
+            </param>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException.ErrorCode">
+            <summary>
+            Gets the status code.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException.Content">
+            <summary>
+            Gets the content.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException`1">
+            <summary>
+            The exception that is thrown when a response with error <see cref="T:System.Net.HttpStatusCode"/> and Spotify error content of type <typeparamref name="TError"/>
+            is returned from the Spotify service.
+            </summary>
+            <typeparam name="TError">The type of error.</typeparam>
+            <seealso cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException" />
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException`1.#ctor(System.Type,System.Net.HttpStatusCode,System.String,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException`1" /> class.
+            </summary>
+            <param name="clientType">The client type.</param>
+            <param name="errorCode">The error status code.</param>
+            <param name="content">The content.</param>
+            <param name="error">The error.</param>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException`1.Error">
+            <summary>
+            Gets the error.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Exceptions.SpotifyRegularErrorException">
+            <summary>
+            The exception that is thrown when a response with error <see cref="T:System.Net.HttpStatusCode"/> and Spotify error content of type <see cref="T:FluentSpotifyApi.Core.Model.RegularError"/>
+            is returned from the Spotify service.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Exceptions.SpotifyRegularErrorException.#ctor(System.Type,System.Net.HttpStatusCode,System.String,FluentSpotifyApi.Core.Model.RegularError)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyRegularErrorException" /> class.
+            </summary>
+            <param name="clientType">The client type.</param>
+            <param name="errorCode">The error status code.</param>
+            <param name="content">The content.</param>
+            <param name="error">The error.</param>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.HttpHandlers.SpotifyErrorHandler`3">
+            <summary>
+            The base <see cref="T:System.Net.Http.DelegatingHandler"/> that shields exceptions thrown by <see cref="T:System.Net.Http.HttpClient"/> and transforms error responses into exceptions.
+            </summary>
+            <typeparam name="TClient">The client type.</typeparam>
+            <typeparam name="TErrorResponse">The error response type.</typeparam>
+            <typeparam name="TError">The error type that is selected from <typeparamref name="TError"/>.</typeparam>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.HttpHandlers.SpotifyErrorHandler`3.#ctor(System.Func{`1,`2},System.Func{System.Type,System.Net.HttpStatusCode,System.String,`2,FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException{`2}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.HttpHandlers.SpotifyErrorHandler`3" /> class.
+            </summary>
+            <param name="errorSelector">
+            A transform function that is applied to instance of <typeparamref name="TErrorResponse"/> in order to get instance of <typeparamref name="TError"/>.
+            </param>
+            <param name="exceptionFromErrorFactory">A factory that creates concrete implementation of <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyHttpResponseException`1"/>.</param>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.HttpHandlers.SpotifyErrorHandler`3.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:FluentSpotifyApi.Core.HttpHandlers.SpotifyRegularErrorHandler`1">
+            <summary>
+            The <see cref="T:System.Net.Http.DelegatingHandler"/> that shields exceptions thrown by <see cref="T:System.Net.Http.HttpClient"/>
+            and transforms error responses with regular error content into <see cref="T:FluentSpotifyApi.Core.Exceptions.SpotifyRegularErrorException"/>.
+            </summary>
+            <typeparam name="TClient"></typeparam>
+            <seealso cref="T:FluentSpotifyApi.Core.HttpHandlers.SpotifyErrorHandler`3" />
+        </member>
+        <member name="M:FluentSpotifyApi.Core.HttpHandlers.SpotifyRegularErrorHandler`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.HttpHandlers.SpotifyRegularErrorHandler`1" /> class.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.EntityBase">
+            <summary>
+            The base class for Spotify entities.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.EntityBase.Type">
+            <summary>
+            The entity type.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.EntityBase.Id">
+            <summary>
+            The Spotify ID for the entity.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.EntityBase.Uri">
+            <summary>
+            The Spotify URI for the entity.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.EntityBase.Href">
+            <summary>
+            A link to the Web API endpoint providing full details of the entity.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.EntityBase.ExternalUrls">
+            <summary>
+            Known external URLs for the entity.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.ExplicitContentSettings">
+            <summary>
+            Explicit content settings.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.ExplicitContentSettings.FilterEnabled">
+            <summary>
+            When <c>true</c>, indicates that explicit content should not be played.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.ExplicitContentSettings.FilterLocked">
+            <summary>
+            When <c>true</c>, indicates that the explicit content setting is locked and can’t be changed by the user.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.Followers">
+            <summary>
+            The followers.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.Followers.Href">
+            <summary>
+            A link to the Web API endpoint providing full details of the followers; <c>null</c> if not available.
+            Please note that this will always be set to <c>null</c>, as the Web API does not support it at the moment.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.Followers.Total">
+            <summary>
+            The total number of followers.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.Image">
+            <summary>
+            The image.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.Image.Height">
+            <summary>
+            The image height in pixels. If unknown: null or not returned.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.Image.Url">
+            <summary>
+            The source URL of the image.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.Image.Width">
+            <summary>
+            The image width in pixels. If unknown: null or not returned.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.JsonObject">
+            <summary>
+            The base class for all Spotify JSON objects.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.JsonObject.AdditionalProperties">
+            <summary>
+            Dictionary of properties that do not have matching member.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.PrivateUser">
+            <summary>
+            The private user.
+            </summary>
+            <seealso cref="T:FluentSpotifyApi.Core.Model.UserBase" />
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.PrivateUser.Country">
+            <summary>
+            The country of the user, as set in the user’s account profile. An ISO 3166-1 alpha-2 country code.
+            This field is only available when the current user has granted access to the <c>user-read-private</c> scope.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.PrivateUser.Email">
+            <summary>
+            The user’s email address, as entered by the user when creating their account.
+            Important! This email address is unverified; there is no proof that it actually belongs to the user.
+            This field is only available when the current user has granted access to the <c>user-read-email</c> scope.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.PrivateUser.ExplicitContent">
+            <summary>
+            The user’s explicit content settings. This field is only available when the current user has granted access to the <c>user-read-private</c> scope.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.PrivateUser.Product">
+            <summary>
+            The user’s Spotify subscription level: “premium”, “free”, etc. (The subscription level “open” can be considered the same as “free”.)
+            This field is only available when the current user has granted access to the <c>user-read-private</c> scope.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.PublicUser">
+            <summary>
+            The public user.
+            </summary>
+            <seealso cref="T:FluentSpotifyApi.Core.Model.UserBase" />
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.RegularError">
+            <summary>
+            The regular error.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.RegularError.Status">
+            <summary>
+            The HTTP status code that is also returned in the response header.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.RegularError.Message">
+            <summary>
+            A short description of the cause of the error.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.RegularError.Reason">
+            <summary>
+            The reason code for the error. Currently available only from Player API.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.RegularErrorResponse">
+            <summary>
+            The regular error response.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.RegularErrorResponse.Error">
+            <summary>
+            The regular error.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Model.UserBase">
+            <summary>
+            The base class for users.
+            </summary>
+            <seealso cref="T:FluentSpotifyApi.Core.Model.EntityBase" />
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.UserBase.DisplayName">
+            <summary>
+            The name displayed on the user’s profile. null if not available.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.UserBase.Followers">
+            <summary>
+            Information about the followers of the user.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.Model.UserBase.Images">
+            <summary>
+            The user’s profile image.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Options.IOptionsProvider`1">
+            <summary>
+            The options provider interface.
+            </summary>
+            <typeparam name="TOptions"></typeparam>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Options.IOptionsProvider`1.Get">
+            <summary>
+            Gets the current options.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Options.OptionsProvider`1">
+            <summary>
+            The options provider implementation using <see cref="T:Microsoft.Extensions.Options.IOptions`1"/>.
+            </summary>
+            <typeparam name="TOptions"></typeparam>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Options.OptionsProvider`1.#ctor(Microsoft.Extensions.Options.IOptions{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentSpotifyApi.Core.Options.OptionsProvider`1"/> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Options.OptionsProvider`1.Get">
+            <summary>
+            Gets the current options.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Serialization.SpotifyTimeSpanMillisecondsConverter">
+            <summary>
+            Provides conversion between time interval represented as whole milliseconds and <see cref="T:System.TimeSpan"/>.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Serialization.SpotifyTimeSpanMillisecondsConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Serialization.SpotifyTimeSpanMillisecondsConverter.Write(System.Text.Json.Utf8JsonWriter,System.TimeSpan,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Serialization.SpotifyTimestampMillisecondsConverter">
+            <summary>
+            Provides conversion between epoch timestamp in milliseconds (i.e. number of milliseconds since 1/1/1970) and <see cref="T:System.DateTime"/>.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Serialization.SpotifyTimestampMillisecondsConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Serialization.SpotifyTimestampMillisecondsConverter.Write(System.Text.Json.Utf8JsonWriter,System.DateTime,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:FluentSpotifyApi.Core.User.ICurrentUserProvider">
+            <summary>
+            Provides access to authenticated Spotify user.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.User.ICurrentUserProvider.GetAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets the authenticated Spotify user.
+            </summary>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.User.IUser">
+            <summary>
+            Represents user.
+            </summary>
+        </member>
+        <member name="P:FluentSpotifyApi.Core.User.IUser.Id">
+            <summary>
+            Gets the user ID.
+            </summary>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.User.NotSupportedCurrentUserProvider">
+            <summary>
+            The default implementation of <see cref="T:FluentSpotifyApi.Core.User.ICurrentUserProvider"/>.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.User.NotSupportedCurrentUserProvider.GetAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Utils.SpotifyArgumentAssertUtils">
+            <summary>
+            The set of argument assert utilities intended for FluentSpotifyApi library usage.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyArgumentAssertUtils.ThrowIfNull``1(``0,System.String)">
+            <summary>
+            Throws <see cref="T:System.ArgumentNullException"/> when specified value is null.
+            </summary>
+            <typeparam name="T">The value type.</typeparam>
+            <param name="value">The value.</param>
+            <param name="paramName">The input parameter name.</param>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyArgumentAssertUtils.ThrowIfNullOrEmpty(System.String,System.String)">
+            <summary>
+            Throws <see cref="T:System.ArgumentNullException"/> when specified value is null.
+            Throws <see cref="T:System.ArgumentException"/> when specified value is empty.
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="paramName">The input parameter name.</param>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Utils.SpotifyDateTimeConversionUtils">
+            <summary>
+            The set of DateTime conversion utilities intended for FluentSpotifyApi library usage.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyDateTimeConversionUtils.ToTimestampMilliseconds(System.DateTime)">
+            <summary>
+            Converts specified value to epoch timestamp in milliseconds (i.e. number of milliseconds since 1/1/1970).
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyDateTimeConversionUtils.FromTimestampMilliseconds(System.Int64)">
+            <summary>
+            Converts specified value representing epoch timestamp in milliseconds (i.e. number of milliseconds since 1/1/1970) to <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyDateTimeConversionUtils.ToIsoWithUnspecifiedLocation(System.DateTime)">
+            <summary>
+            Converts specified value to ISO format without location (i.e. "yyyy-MM-ddTHH:mm:ss").
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Utils.SpotifyHttpUtils">
+            <summary>
+            The set of HTTP utilities intended for FluentSpotifyApi library usage.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyHttpUtils.HandleTimeoutAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)">
+            <summary>
+            Shields <see cref="T:System.OperationCanceledException"/> thrown by <see cref="T:System.Net.Http.HttpClient"/> that represents client timeout.
+            Unfortunately this is not possible to do from <see cref="T:System.Net.Http.DelegatingHandler"/> because inside handler external and internal cancellation tokens are merged together.
+            </summary>
+            <typeparam name="TClient">The client type.</typeparam>
+            <param name="action">The action.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyHttpUtils.HandleTimeoutAsync``2(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``1}},System.Threading.CancellationToken)">
+            <summary>
+            Shields <see cref="T:System.OperationCanceledException"/> thrown by <see cref="T:System.Net.Http.HttpClient"/> that represents client timeout.
+            Unfortunately this is not possible to do from <see cref="T:System.Net.Http.DelegatingHandler"/> because inside handler external and internal cancellation tokens are merged together.
+            </summary>
+            <typeparam name="TClient">The client type.</typeparam>
+            <typeparam name="T">The return type.</typeparam>
+            <param name="func">The function.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyHttpUtils.GetClientName``1">
+            <summary>
+            Gets Spotify HTTP client name.
+            </summary>
+            <typeparam name="TClient">The client type.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Utils.SpotifyObjectUtils">
+            <summary>
+            The set of object utilities intended for FluentSpotifyApi library usage.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyObjectUtils.ConvertToCanonicalString(System.Object)">
+            <summary>
+            Converts specified value to canonical string representation.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Utils.SpotifySemaphoreUtils">
+            <summary>
+            The set of <see cref="T:System.Threading.SemaphoreSlim"/> utilities intended for FluentSpotifyApi library usage.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifySemaphoreUtils.ExecuteAsync(System.Threading.SemaphoreSlim,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)">
+            <summary>
+            Executes asynchronous action inside semaphore.
+            </summary>
+            <param name="semaphore">The semaphore.</param>
+            <param name="action">The action.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifySemaphoreUtils.ExecuteAsync``1(System.Threading.SemaphoreSlim,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Executes asynchronous function inside semaphore.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="semaphore">The semaphore.</param>
+            <param name="func">The function.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Utils.SpotifyTimeSpanConversionUtils">
+            <summary>
+            The set of TimeSpan conversion utilities intended for FluentSpotifyApi library usage.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyTimeSpanConversionUtils.ToWholeMilliseconds(System.TimeSpan)">
+            <summary>
+            Converts specified value to whole milliseconds.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyTimeSpanConversionUtils.FromWholeMilliseconds(System.Int32)">
+            <summary>
+            Converts specified value representing time interval in whole milliseconds to <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentSpotifyApi.Core.Utils.SpotifyUriUtils">
+            <summary>
+            The set of URI utilities intended for FluentSpotifyApi library usage.
+            </summary>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyUriUtils.GetRelativeUri(System.Collections.Generic.IEnumerable{System.Object},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+            <summary>
+            Gets relative URI from specified route values and query parameters.
+            </summary>
+            <param name="routeValues">The sequence of route values.</param>
+            <param name="queryParams">The sequence of query parameters represented as key-value pairs.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyUriUtils.GetPath(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Converts specified route values to URI path.
+            </summary>
+            <param name="routeValues">The sequence of route values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyUriUtils.GetQueryString(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+            <summary>
+            Converts specified query parameters to URI query string.
+            </summary>
+            <param name="queryParams">The sequence of query parameters represented as key-value pairs.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyUriUtils.ConvertToUriString(System.Object)">
+            <summary>
+            Converts specified value to URI escaped string.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:FluentSpotifyApi.Core.Utils.SpotifyUriUtils.ConvertToBase64UriString(System.Byte[])">
+            <summary>
+            Converts specified array of bytes to Base64 encoded URI string.
+            </summary>
+            <param name="bytes">The array of bytes.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
