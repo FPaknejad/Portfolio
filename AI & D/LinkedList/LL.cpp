@@ -39,10 +39,38 @@ class LinkedList{
             length = 1;
 
     }
+
+        void printList(){
+            Node* temp = head; 
+            while (temp) { //true as long as temp is pointing at a node>> temp!= nullptr
+                cout<< temp->value<<endl; //value of the node temp is point to
+                //temp has access to attrubutes value and next
+                temp = temp -> next; 
+                //last node is nullptr which breaks the loop
+            }
+        }
+
+        void getHead(){
+            cout<<"Head: "<<head->value<<endl;
+        }
+        void getTail() {
+            if (tail == nullptr) {
+                cout << "Tail: nullptr" << endl;
+            } else { 
+                cout << "Tail: " << tail->value << endl;
+            }  
+        }
+
+        void getLength() {
+            cout << "Length: " << length << endl;
+        }
 };
 
 
+
 int main() {
-        
     LinkedList* myLinkedList = new LinkedList(4);
+    myLinkedList->getHead();// -> is used because myLinkedList is declared as a pointer to LinkedList class in the line above
+    myLinkedList->getTail();
+    myLinkedList->getLength();
 }
