@@ -1,0 +1,8 @@
+C:\Users\Donya\AppData\Local\Loupedeck\Plugins\SpotifyPremiumPlugin.dll.config
+C:\Users\Donya\AppData\Local\Loupedeck\Plugins\SpotifyPremiumPlugin.dll
+C:\Users\Donya\AppData\Local\Loupedeck\Plugins\SpotifyPremiumPlugin.pdb
+C:\Users\Donya\Projects\Portfolio\Loupedeck\SpotifyPremiumPlugin\src\win\obj\Debug\SpotifyPremiumPlugin.csproj.AssemblyReference.cache
+C:\Users\Donya\Projects\Portfolio\Loupedeck\SpotifyPremiumPlugin\src\win\obj\Debug\SpotifyPremiumPlugin.csproj.CoreCompileInputs.cache
+C:\Users\Donya\Projects\Portfolio\Loupedeck\SpotifyPremiumPlugin\src\win\obj\Debug\SpotifyPremiumPlugin.csproj.CopyComplete
+C:\Users\Donya\Projects\Portfolio\Loupedeck\SpotifyPremiumPlugin\src\win\obj\Debug\SpotifyPremiumPlugin.dll
+C:\Users\Donya\Projects\Portfolio\Loupedeck\SpotifyPremiumPlugin\src\win\obj\Debug\SpotifyPremiumPlugin.pdb
