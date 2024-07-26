@@ -1,0 +1,2 @@
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\obj\Debug\ObsStudioPlugin.csproj.AssemblyReference.cache
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\obj\Debug\ObsStudioPlugin.csproj.CoreCompileInputs.cache

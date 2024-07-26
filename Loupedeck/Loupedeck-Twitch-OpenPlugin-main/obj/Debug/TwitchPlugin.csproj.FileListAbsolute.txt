@@ -1,0 +1,4 @@
+X:\Projects\Portfolio\Loupedeck\Loupedeck-Twitch-OpenPlugin-main\obj\Debug\TwitchPlugin.csproj.AssemblyReference.cache
+X:\Projects\Portfolio\Loupedeck\Loupedeck-Twitch-OpenPlugin-main\obj\Debug\Loupedeck.TwitchPlugin.Localization.Localization.resources
+X:\Projects\Portfolio\Loupedeck\Loupedeck-Twitch-OpenPlugin-main\obj\Debug\TwitchPlugin.csproj.GenerateResource.cache
+X:\Projects\Portfolio\Loupedeck\Loupedeck-Twitch-OpenPlugin-main\obj\Debug\TwitchPlugin.csproj.CoreCompileInputs.cache

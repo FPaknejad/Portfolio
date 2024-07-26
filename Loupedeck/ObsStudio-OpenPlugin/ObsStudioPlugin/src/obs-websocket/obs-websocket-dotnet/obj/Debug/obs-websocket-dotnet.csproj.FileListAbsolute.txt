@@ -1,0 +1,10 @@
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\bin\Debug\obs-websocket-dotnet.xml
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\bin\Debug\obs-websocket-dotnet.dll
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\bin\Debug\obs-websocket-dotnet.pdb
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\bin\Debug\Newtonsoft.Json.dll
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\bin\Debug\websocket-sharp.dll
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\obj\Debug\obs-websocket-dotnet.csproj.AssemblyReference.cache
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\obj\Debug\obs-websocket-dotnet.csproj.CoreCompileInputs.cache
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\obj\Debug\obs-websocket-dotnet.csproj.CopyComplete
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\obj\Debug\obs-websocket-dotnet.dll
+X:\Projects\Portfolio\Loupedeck\ObsStudio-OpenPlugin\ObsStudioPlugin\src\obs-websocket\obs-websocket-dotnet\obj\Debug\obs-websocket-dotnet.pdb

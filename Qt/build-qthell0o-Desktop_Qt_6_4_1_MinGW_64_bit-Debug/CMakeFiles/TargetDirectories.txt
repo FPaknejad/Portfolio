@@ -1,0 +1,9 @@
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/qthell0o.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/qthell0o_autogen_timestamp_deps.dir
+X:/Projects/Portfolio/Qt/build-qthell0o-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/qthell0o_autogen.dir
