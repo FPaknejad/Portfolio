@@ -1,0 +1,20 @@
+body {
+  width: 300px;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+}
+
+#extract-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 16px;
+  white-space: pre-wrap;
+}
