@@ -1,0 +1,25 @@
+import requests
+
+# Define the API endpoint
+url = "https://smmcity.com/api/v2"
+
+# Define the headers
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",  # Replace with your actual API key/token if needed
+    "Content-Type": "application/json"       # Adjust the Content-Type as needed
+}
+
+# Define the body or parameters
+data = {
+    "key": "value"  # Replace with the actual body parameters for your API
+}
+
+# Make the POST request
+response = requests.post(url, headers=headers, json=data)
+
+# Check the response
+if response.status_code == 200:
+    print("Request was successful!")
+    print("Response:", response.json())
+else:
+    print(f"Error {response.status_code}: {response.text}")

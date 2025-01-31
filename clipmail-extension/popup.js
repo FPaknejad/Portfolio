@@ -17,16 +17,22 @@ document.getElementById('extract-btn').addEventListener('click', async () => {
 
     if (!imageBlob) {
       alert('⚠️ No image found in clipboard! Use Win+Shift+S to capture a screenshot first.');
-      return; 
+      return;
     }
 
     // Convert blob to image URL for Tesseract
     const imageUrl = URL.createObjectURL(imageBlob);
     console.log('Image URL created:', imageUrl);
 
-    // Initialize Tesseract worker
+    // Initialize Tesseract worker with local scripts
     console.log('Initializing Tesseract...');
-    const worker = await Tesseract.createWorker();
+    const worker = Tesseract.createWorker({
+      workerPath: 'scripts/worker.min.js',
+      corePath: 'scripts/tesseract-core.wasm.js',
+      langPath: 'https://tessdata.projectnaptha.com/4.0.0/',
+    });
+
+    await worker.load();
     await worker.loadLanguage('eng');
     await worker.initialize('eng');
 
@@ -41,6 +47,6 @@ document.getElementById('extract-btn').addEventListener('click', async () => {
 
   } catch (error) {
     console.error('❌ Error:', error);
-    alert(`Failed to extract text: ${error.message}`);
+    alert(`Failed to extract text: ${error.message || error.toString()}`);
   }
 });
