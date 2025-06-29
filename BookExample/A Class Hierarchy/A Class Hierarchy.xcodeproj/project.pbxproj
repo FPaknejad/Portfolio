@@ -1,0 +1,81 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXFileReference section */
+		695F5A7F2DF8FA4D00A1958B /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
+		695F5A802DF8FA4D00A1958B /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
+		695F5A812DF8FEB200A1958B /* Student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Student.hpp; sourceTree = "<group>"; };
+		695F5A822DF8FEB200A1958B /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		695F5A782DF8FA3E00A1958B = {
+			isa = PBXGroup;
+			children = (
+				695F5A7F2DF8FA4D00A1958B /* Person.hpp */,
+				695F5A802DF8FA4D00A1958B /* Person.cpp */,
+				695F5A812DF8FEB200A1958B /* Student.hpp */,
+				695F5A822DF8FEB200A1958B /* Student.cpp */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		695F5A792DF8FA3E00A1958B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1630;
+			};
+			buildConfigurationList = 695F5A7C2DF8FA3E00A1958B /* Build configuration list for PBXProject "A Class Hierarchy" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 695F5A782DF8FA3E00A1958B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		695F5A7D2DF8FA3E00A1958B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		695F5A7E2DF8FA3E00A1958B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		695F5A7C2DF8FA3E00A1958B /* Build configuration list for PBXProject "A Class Hierarchy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				695F5A7D2DF8FA3E00A1958B /* Debug */,
+				695F5A7E2DF8FA3E00A1958B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 695F5A792DF8FA3E00A1958B /* Project object */;
+}

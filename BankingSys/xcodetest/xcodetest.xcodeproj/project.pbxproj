@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		695F5A6B2DF5111E00A1958B /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 695F5A6A2DF5111E00A1958B /* Car.cpp */; };
+		695F5A6E2DF5113B00A1958B /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 695F5A6D2DF5113B00A1958B /* Car.cpp */; };
+		695F5A702DF64C6500A1958B /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 695F5A6F2DF64C6500A1958B /* Main.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		692C052E2DC6B39B001ED102 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,15 +26,12 @@
 
 /* Begin PBXFileReference section */
 		692C05302DC6B39B001ED102 /* xcodetest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcodetest; sourceTree = BUILT_PRODUCTS_DIR; };
+		695F5A692DF5111E00A1958B /* Car.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Car.hpp; path = /Users/niuklear/Portfolio/Car.hpp; sourceTree = "<absolute>"; };
+		695F5A6A2DF5111E00A1958B /* Car.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Car.cpp; path = /Users/niuklear/Portfolio/Car.cpp; sourceTree = "<absolute>"; };
+		695F5A6C2DF5113B00A1958B /* Car.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Car.hpp; path = /Users/niuklear/Portfolio/BookExample/Car.hpp; sourceTree = "<absolute>"; };
+		695F5A6D2DF5113B00A1958B /* Car.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Car.cpp; path = /Users/niuklear/Portfolio/BookExample/Car.cpp; sourceTree = "<absolute>"; };
+		695F5A6F2DF64C6500A1958B /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = /Users/niuklear/Portfolio/BookExample/Main.cpp; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		692C05322DC6B39B001ED102 /* xcodetest */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = xcodetest;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		692C052D2DC6B39B001ED102 /* Frameworks */ = {
@@ -44,7 +47,11 @@
 		692C05272DC6B39B001ED102 = {
 			isa = PBXGroup;
 			children = (
-				692C05322DC6B39B001ED102 /* xcodetest */,
+				695F5A6C2DF5113B00A1958B /* Car.hpp */,
+				695F5A6D2DF5113B00A1958B /* Car.cpp */,
+				695F5A6F2DF64C6500A1958B /* Main.cpp */,
+				695F5A692DF5111E00A1958B /* Car.hpp */,
+				695F5A6A2DF5111E00A1958B /* Car.cpp */,
 				692C05312DC6B39B001ED102 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,9 +78,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				692C05322DC6B39B001ED102 /* xcodetest */,
 			);
 			name = xcodetest;
 			packageProductDependencies = (
@@ -120,6 +124,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695F5A6E2DF5113B00A1958B /* Car.cpp in Sources */,
+				695F5A6B2DF5111E00A1958B /* Car.cpp in Sources */,
+				695F5A702DF64C6500A1958B /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
