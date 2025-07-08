@@ -7,20 +7,18 @@
 
 #include <stdio.h>
 #include <iostream>
-class Task{
-private:
-    std::string title;
-    bool isDone;
-    
-public:
-    Task(std::string title, bool isDone);
-    
-    void markDone(std::string title, bool isDone);
-    void printTask();
-};
+#include "Task.h"
+#include <vector>
+#include "TaskManager.hpp"
 
 int main(){
+    //Task taskObj("task 1",false);
+//  std::vector<Task> taskList;
     
-    Task taskObj;
+    TaskManager manageObj;
+    
+    manageObj.runMenu();
+        return 0;
 }
-
+
+
