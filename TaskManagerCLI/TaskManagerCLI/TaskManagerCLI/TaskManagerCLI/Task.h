@@ -11,6 +11,7 @@
 #include <string>
 #include <iostream>
 
+
 class Task {
 private:
     std::string title;
@@ -18,9 +19,11 @@ private:
     
 public:
     Task(std::string desc, bool isDone);
+
     void markDone();
     void printTask() const;
     bool isDone() const;
+    std::string getTitle();
 };
 
 #endif // TASK_H

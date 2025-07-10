@@ -22,5 +22,8 @@ bool Task::isDone() const {
 Task::Task(std::string title, bool isDone)
     : title(title), done(isDone) {}
 
+std::string Task::getTitle(){
+    return title;
+}
 
 

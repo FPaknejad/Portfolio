@@ -9,7 +9,9 @@
 #define TaskManager_hpp
 
 #include <stdio.h>
+#include <fstream>
 #include "Task.h"
+
 class TaskManager{
     
 private:
@@ -22,6 +24,8 @@ public:
     void deleteTask();
     int runMenu();
     void filterTask();
+    void saveToFile();
+    void readFile();
 };
 
 #endif /* TaskManager_hpp */
