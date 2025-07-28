@@ -27,12 +27,13 @@ jobs:
 
     - name: Build project
       run: |
-        mkdir build
+        cd TaskManagerCLI
+        mkdir -p build
         cd build
         cmake ..
         make
 
     - name: Run tests
       run: |
-        cd build
+        cd TaskManagerCLI/build
         ctest --output-on-failure
