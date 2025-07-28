@@ -12,7 +12,7 @@
 #include <fstream>
 #include "Task.h"
 #include "TaskRepository.hpp"
-
+#include <vector>
 
 class TaskManager{
     
