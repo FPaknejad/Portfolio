@@ -27,7 +27,7 @@ jobs:
 
     - name: Build project
       run: |
-        cd TaskManagerCLI
+        cd TaskManagerCLI/TaskManagerCLI
         mkdir -p build
         cd build
         cmake ..
@@ -35,5 +35,5 @@ jobs:
 
     - name: Run tests
       run: |
-        cd TaskManagerCLI/build
+        cd TaskManagerCLI/TaskManagerCLI/build
         ctest --output-on-failure
