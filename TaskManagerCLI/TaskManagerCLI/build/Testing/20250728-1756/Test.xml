@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250728-1756-Experimental"
+	Name="(empty)"
+	Generator="ctest-4.0.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="Fatemehs-MacBook-Air.local"
+	OSRelease="15.5"
+	OSVersion="24F74"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="Apple"
+	VendorID="Apple"
+	FamilyID="0"
+	ModelID="0"
+	ModelName="Apple M4"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="10"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="16384"
+	LogicalProcessorsPerPhysical="10"
+	ProcessorClockFrequency="0"
+	>
+	<Testing>
+		<StartDateTime>Jul 28 20:24 CEST</StartDateTime>
+		<StartTestTime>1753727082</StartTestTime>
+		<TestList>
+			<Test>./tests/TaskManagerTest</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>TaskManagerTest</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/TaskManagerTest</FullName>
+			<FullCommandLine>/Users/niuklear/Portfolio/TaskManagerCLI\ copy/TaskManagerCLI/build/tests/TaskManagerTest</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00331117</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/niuklear/Portfolio/TaskManagerCLI\ copy/TaskManagerCLI/build/tests/TaskManagerTest</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNUbtuwzAM3PUVHOPBctu9Q4AWHfqE7UyGUag2KwiRqUCU09+vFAdGHaCBb6LIuyOoK0ciQxoGZWiTwbd3AxQ7Rs8FmXFvUflCO6ctBuTwt2TfFTpVn0kru0409zNaKM/Gd5A4PDnfnh7AowkoRZPPaOHJui9lpznS0XhHA1LkYsjHwwV5YVor3r8qUhp9HbuigXL3Bie0l0O57fvUqtQRuXYlHlzkT3h/XsWHzQ0MnF1f82I4pB5fd59ps+naKycBBBeUzcS6rwwxzLx3P7RM6t+EwCuSy0Xxmo9tVT0+pKPPQil+AeFIugY=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jul 28 20:24 CEST</EndDateTime>
+		<EndTestTime>1753727082</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
