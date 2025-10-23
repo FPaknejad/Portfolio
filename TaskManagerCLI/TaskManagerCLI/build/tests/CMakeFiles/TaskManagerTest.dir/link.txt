@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/TaskManagerTest.dir/TaskManagerTest.cpp.o CMakeFiles/TaskManagerTest.dir/__/src/Task.cpp.o CMakeFiles/TaskManagerTest.dir/__/src/TaskManager.cpp.o CMakeFiles/TaskManagerTest.dir/__/src/TaskRepository.cpp.o -o TaskManagerTest  -lgtest -lgtest_main -lpthread

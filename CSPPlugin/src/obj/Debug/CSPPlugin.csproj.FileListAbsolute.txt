@@ -1,0 +1,13 @@
+/Users/niuklear/CSPPlugin/bin/Debug/bin/CSPPlugin.deps.json
+/Users/niuklear/CSPPlugin/bin/Debug/bin/CSPPlugin.dll
+/Users/niuklear/CSPPlugin/bin/Debug/bin/CSPPlugin.pdb
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.csproj.AssemblyReference.cache
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.GeneratedMSBuildEditorConfig.editorconfig
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.AssemblyInfoInputs.cache
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.AssemblyInfo.cs
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.csproj.CoreCompileInputs.cache
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.csproj.Up2Date
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.dll
+/Users/niuklear/CSPPlugin/src/obj/Debug/refint/CSPPlugin.dll
+/Users/niuklear/CSPPlugin/src/obj/Debug/CSPPlugin.pdb
+/Users/niuklear/CSPPlugin/src/obj/Debug/ref/CSPPlugin.dll
