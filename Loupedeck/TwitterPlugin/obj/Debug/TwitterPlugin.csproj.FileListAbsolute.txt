@@ -1,8 +1,0 @@
-C:\Users\Donya\AppData\Local\Loupedeck\Plugins\Twitter\win\TwitterPlugin.dll.config
-C:\Users\Donya\AppData\Local\Loupedeck\Plugins\Twitter\win\TwitterPlugin.dll
-C:\Users\Donya\AppData\Local\Loupedeck\Plugins\Twitter\win\TwitterPlugin.pdb
-C:\Users\Donya\Projects\Portfolio\Loupedeck\TwitterPlugin\obj\Debug\TwitterPlugin.csproj.AssemblyReference.cache
-C:\Users\Donya\Projects\Portfolio\Loupedeck\TwitterPlugin\obj\Debug\TwitterPlugin.csproj.CoreCompileInputs.cache
-C:\Users\Donya\Projects\Portfolio\Loupedeck\TwitterPlugin\obj\Debug\TwitterPlugin.csproj.CopyComplete
-C:\Users\Donya\Projects\Portfolio\Loupedeck\TwitterPlugin\obj\Debug\TwitterPlugin.dll
-C:\Users\Donya\Projects\Portfolio\Loupedeck\TwitterPlugin\obj\Debug\TwitterPlugin.pdb

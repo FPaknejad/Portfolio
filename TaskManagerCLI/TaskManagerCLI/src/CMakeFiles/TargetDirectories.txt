@@ -1,0 +1,9 @@
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/CMakeFiles/app.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/CMakeFiles/test.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/CMakeFiles/edit_cache.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/CMakeFiles/rebuild_cache.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/tests/CMakeFiles/TaskTest.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/tests/CMakeFiles/TaskManagerTest.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/tests/CMakeFiles/test.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/tests/CMakeFiles/edit_cache.dir
+/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/tests/CMakeFiles/rebuild_cache.dir

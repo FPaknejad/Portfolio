@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/app.dir/Main.cpp.o CMakeFiles/app.dir/Task.cpp.o CMakeFiles/app.dir/TaskManager.cpp.o CMakeFiles/app.dir/TaskRepository.cpp.o -o app

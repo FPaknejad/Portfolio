@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/cmake_install.cmake",
+		"/Users/niuklear/Portfolio/TaskManagerCLI/TaskManagerCLI/src/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -12,7 +12,6 @@
 #include <sstream>
 #include <iostream>
 
-
 void TaskManager::setRepository(ITaskRepository* customRepo) {
     repo = customRepo;
 }
@@ -28,6 +27,22 @@ void TaskManager::addTask(){
     std::cin.ignore();
     std::getline(std::cin,taskTitle);
     taskList.push_back(Task(taskTitle,false));
+
+    std::cout<<"Set priority (1. Low, 2. Medium, 3. High): "<<std::flush;
+    int priorityInput;
+    std::cin>>priorityInput;
+    if (std::cin.fail()) {
+        std::cin.clear(); // clear error state
+        std::cin.ignore(1000, '\n'); // discard bad input
+        std::cout << "Invalid input. Please enter a number.\n"<<std::flush;
+        return; 
+    }
+    else if (priorityInput < 1|| priorityInput > 3){
+        std::cout<<"Please enter valid priority number 1 - 2\n"<<std::flush;
+    }
+
+
+    Task::setPriority(priorityInput);
 }
 
 void TaskManager::listTasks() const{
@@ -194,7 +209,7 @@ int TaskManager:: runMenu(){
                     break;
             }
         
-    }
+        }
 
-}
     }
+}

@@ -10,7 +10,7 @@ add_executable(TaskManagerTest
     TaskManagerTest.cpp
     ../src/Task.cpp
     ../src/TaskManager.cpp
-    ../src/TaskRepository.cpp  # ✅ this line was missing
+    ../src/TaskRepository.cpp  
 )
 target_include_directories(TaskManagerTest PRIVATE ../src)
 target_link_libraries(TaskManagerTest gtest gtest_main pthread)

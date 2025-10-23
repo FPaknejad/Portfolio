@@ -1,1 +1,81 @@
-Portfolio/
+# OS/system
+.DS_Store
+Thumbs.db
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+build/
+dist/
+out/
+
+
+# User/IDE
+*.user
+*.suo
+*.cache
+*.log
+.vscode/
+.idea/
+*.vs/
+*.vspscc
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.nuget.props
+*.nuget.targets
+*.nuget.g.props
+*.nuget.g.targets
+
+# Package restore data
+project.assets.json
+project.nuget.cache
+*.lock.json
+
+# Temporary
+*.tmp
+*.bak
+
+# Qt build directories
+build*/
+*.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qmlc
+*.jsc
+*.obj
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.app
+*.dSYM
+*.qrc.dep
+*.qrc
+*.moc
+moc_*
+ui_*
+qrc_*
+*.pyc
+*.pyo
+*.idx
+
+# Compiler and IDE cache/index files
+*.idx
+*.pch
+*.obj
+*.o
+*.sdf
+*.ipch
+*.cache/
+.clangd/
+.clangd-cache/
+/clipmail-extension/*
+/Class Hierarchy
+/BookExample
+
